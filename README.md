@@ -8,7 +8,7 @@ Goals
 -Apply statistics to quantitative finance and machine learning
 
 Roadmap
--[] Mean
+-[x] Mean
 -[] Median
 -[] Mode
 -[] Variance
