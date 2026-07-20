@@ -1,20 +1,122 @@
-# Statistics
-A modern C++ statistics library built completely from scratch
+# Statistics-CPP
 
-Goals
--Learn mathematical statistics by implementation
--Build reusable C++ components
--Understand algorithms instead of relying on libraries
--Apply statistics to quantitative finance and machine learning
+A modern C++17 statistics library built completely from scratch.
 
-Roadmap
--[x] Mean
--[] Median
--[] Mode
--[] Variance
--[] Standard Deviation
--[] Covariance
--[] Correlation
--[] Z Score
--[] Linear Regression
--[] PCA
+The goal of this project is not only to provide statistical algorithms, but also to deeply understand the mathematics, modern C++, software engineering principles, and numerical computing behind every implementation.
+
+---
+
+## Objectives
+
+- Learn mathematical statistics through implementation
+- Master Modern C++ by building a real library
+- Build reusable, well-documented components
+- Understand algorithms instead of treating them as black boxes
+- Prepare for quantitative finance, machine learning, and scientific computing
+
+---
+
+## Features
+
+### Descriptive Statistics
+
+- [x] Arithmetic Mean
+- [x] Median
+- [x] Population Variance
+- [ ] Sample Variance
+- [ ] Standard Deviation
+- [ ] Mode
+
+### Relationship Between Variables
+
+- [ ] Covariance
+- [ ] Pearson Correlation
+
+### Standardization
+
+- [ ] Z-Score
+
+### Regression
+
+- [ ] Linear Regression
+
+### Dimensionality Reduction
+
+- [ ] Principal Component Analysis (PCA)
+
+---
+
+## Project Structure
+
+```
+statistics-cpp/
+│
+├── include/
+│   └── Statistics.hpp
+│
+├── src/
+│   └── Statistics.cpp
+│
+├── examples/
+│
+├── tests/
+│
+├── datasets/
+│
+└── docs/
+```
+
+---
+
+## Current Progress
+
+| Function | Status | Time Complexity |
+|----------|:------:|:---------------:|
+| Mean | ✅ | O(n) |
+| Median | ✅ | O(n log n) |
+| Population Variance | ✅ | O(n) |
+| Sample Variance | ⏳ | O(n) |
+| Standard Deviation | ⏳ | O(n) |
+| Covariance | ⏳ | O(n) |
+| Correlation | ⏳ | O(n) |
+| Z-Score | ⏳ | O(n) |
+| Linear Regression | ⏳ | O(n) |
+| PCA | ⏳ | O(n³) |
+
+---
+
+## Learning Philosophy
+
+Every algorithm in this library is implemented from scratch.
+
+For every statistical concept we study:
+
+1. Mathematics
+2. Algorithm Design
+3. Modern C++ Implementation
+4. Complexity Analysis
+5. Testing
+6. Documentation
+
+The objective is to understand *why* each algorithm works before writing code.
+
+---
+
+## Future Goals
+
+- Template support
+- Matrix class
+- CSV Reader
+- Numerical stability improvements
+- Unit tests
+- Benchmarks
+- CMake support
+- Continuous Integration (GitHub Actions)
+
+---
+
+## Author
+
+**Praanjal Jain**
+
+Built as a long-term Modern C++ and Mathematical Statistics learning project.
