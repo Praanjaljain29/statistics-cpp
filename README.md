@@ -23,7 +23,7 @@ The goal of this project is not only to provide statistical algorithms, but also
 - [x] Arithmetic Mean
 - [x] Median
 - [x] Population Variance
-- [ ] Sample Variance
+- [x] Sample Variance
 - [ ] Standard Deviation
 - [ ] Mode
 
@@ -75,7 +75,7 @@ statistics-cpp/
 | Mean | ✅ | O(n) |
 | Median | ✅ | O(n log n) |
 | Population Variance | ✅ | O(n) |
-| Sample Variance | ⏳ | O(n) |
+| Sample Variance | ✅ | O(n) |
 | Standard Deviation | ⏳ | O(n) |
 | Covariance | ⏳ | O(n) |
 | Correlation | ⏳ | O(n) |

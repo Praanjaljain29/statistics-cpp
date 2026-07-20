@@ -5,6 +5,7 @@
 class Statistics {
     public:
         /**
+         * @note
          * Calculates the arithmetic mean of a dataset.
          * 
          * @param data Input dataset.
@@ -13,6 +14,7 @@ class Statistics {
          */
         static double mean(const std::vector<double>& data);
         /**
+         * @note
          * Calculates the median of a dataset.
          * 
          * @param data Input dataset.
@@ -27,9 +29,10 @@ class Statistics {
          */
         static double median(const std::vector<double>& data);
         /**
-         *Calculates the population variance of a dataset.
+         * @note
+         * Calculates the population variance of a dataset.
          *
-         *Mathematical Formula:
+         * Mathematical Formula:
          * σ² = Σ(x - μ)² / N
          *
          * @param data Input dataset.
@@ -37,10 +40,28 @@ class Statistics {
          * @throws std::invalid_argument if the dataset is empty.
          *
          * Time Complexity:
-         *O(n)
+         * O(n)
          *
          * Space Complexity:
          * O(1)
          */
-        static double variance(const std::vector<double>& data);
+        static double populationVariance(const std::vector<double>& data);
+        /**
+         * @note
+         * Calculates the sample variance of a dataset.
+         *
+         * Mathematical Formula:
+         * s² = Σ(x - x̄)² / (n - 1)
+         * 
+         * @param data Input dataset.
+         * @return Sample variance.
+         * @throws std::invalid_argument if fewer than two observations are provided.
+         * 
+         * Time Complexity:
+         * O(n)
+         * 
+         * Space Complexity:
+         * O(1)
+         */
+        static double sampleVariance(const std::vector<double>& data);
 };

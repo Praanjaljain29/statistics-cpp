@@ -31,7 +31,7 @@ double Statistics::median(const std::vector<double>& data) {
     }
     return ((sorteddatacopy[data.size()/2]) + (sorteddatacopy[(data.size()/2) - 1 ])) /2.0;
 }
-double Statistics::variance(const std::vector<double>& data) {
+double Statistics::populationVariance(const std::vector<double>& data) {
     if(data.empty()) {
         throw std::invalid_argument(
             "Cannot calculate variance of an empty dataset."
@@ -44,4 +44,18 @@ double Statistics::variance(const std::vector<double>& data) {
         varianceSum += (deviation * deviation);
     }
     return varianceSum / static_cast<double>(data.size());
+}
+double Statistics::sampleVariance(const std::vector<double>& data) {
+    if(data.size()<2) {
+        throw std::invalid_argument(
+             "Sample variance requires at least two observations."
+        );
+    }
+    double avg = Statistics::mean(data);
+    double varianceSum = 0.0;
+    for(const auto& value : data) {
+        double deviation = value - avg;
+        varianceSum += (deviation * deviation);
+    }
+    return varianceSum / static_cast<double>(data.size()-1);
 }
