@@ -25,7 +25,7 @@ The goal of this project is not only to provide statistical algorithms, but also
 - [x] Population Variance
 - [x] Sample Variance
 - [x] Population Standard Deviation
-- [ ] Sample Standard Deviation
+- [x] Sample Standard Deviation
 - [ ] Mode
 
 ### Relationship Between Variables

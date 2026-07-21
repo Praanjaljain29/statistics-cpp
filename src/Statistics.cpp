@@ -64,3 +64,6 @@ double Statistics::populationStandardDeviation(const std::vector<double>& data) 
     return std::sqrt(Statistics::populationVariance(data));
     
 }
+double Statistics::sampleStandardDeviation(const std::vector<double>& data) {
+    return std::sqrt(Statistics::sampleVariance(data));
+}
