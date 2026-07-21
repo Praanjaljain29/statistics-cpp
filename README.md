@@ -26,7 +26,7 @@ The goal of this project is not only to provide statistical algorithms, but also
 - [x] Sample Variance
 - [x] Population Standard Deviation
 - [x] Sample Standard Deviation
-- [ ] Mode
+- [x] Mode
 
 ### Relationship Between Variables
 
@@ -75,10 +75,11 @@ statistics-cpp/
 |----------|:------:|:---------------:|
 | Mean | ✅ | O(n) |
 | Median | ✅ | O(n log n) |
+| Mode | ✅ | O(n) |
 | Population Variance | ✅ | O(n) |
 | Sample Variance | ✅ | O(n) |
 | Population Standard Deviation | ✅ | O(n) |
-| Sample Standard Deviation | ⏳ | O(n) |
+| Sample Standard Deviation | ✅ | O(n) |
 | Covariance | ⏳ | O(n) |
 | Correlation | ⏳ | O(n) |
 | Z-Score | ⏳ | O(n) |

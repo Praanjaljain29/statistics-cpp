@@ -116,5 +116,24 @@ class Statistics {
          * This function computes the Sample Standard Deviation by taking the square root of the Sample variance.
          */
         static double sampleStandardDeviation(const std::vector<double>& data);
+        /**
+         * Calculates the mode(s) of a dataset.
+         *
+         * @param data Input dataset.
+         * @return A vector containing all modes.
+         * Returns an empty vector if no mode exists.
+         * @throws std::invalid_argument if the dataset is empty.
+         *
+         * Time Complexity:
+         * O(n)
+         *
+         * Space Complexity:
+         * O(n)
+         *
+         * @note
+         * Multiple modes are supported.
+         * The returned vector is not guaranteed to be sorted.
+         */
+        static std::vector<double> mode(const std::vector<double>& data);
 
 };

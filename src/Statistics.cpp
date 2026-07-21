@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <stdexcept>
 #include <cmath>
+#include <unordered_map>
 
 double Statistics::mean(const std::vector<double>& data) {
     if(data.empty()) {
@@ -66,4 +67,28 @@ double Statistics::populationStandardDeviation(const std::vector<double>& data) 
 }
 double Statistics::sampleStandardDeviation(const std::vector<double>& data) {
     return std::sqrt(Statistics::sampleVariance(data));
+}
+std::vector<double> Statistics::mode(const std::vector<double>& data) {
+    if(data.empty()) {
+        throw std::invalid_argument (
+            "Cannot calculate mode of empty dataset"
+        );
+    }
+    std::unordered_map<double,std::size_t> frequencyMap;
+    for(const auto& value: data ) {
+        frequencyMap[value]++;
+    }
+    std::vector<double> modes;
+    double maxfrequency = 0;
+    for(const auto&it:frequencyMap) {
+        if ((it.second) > maxfrequency) {
+            maxfrequency = it.second;
+            modes.clear();
+            modes.push_back(it.first);
+        }else if(maxfrequency == it.first) {
+            modes.push_back(it.first);
+        }
+    }
+    if(maxfrequency == 1) return {};
+    return modes;
 }
