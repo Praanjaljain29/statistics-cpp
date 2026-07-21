@@ -1,6 +1,7 @@
 #include "Statistics.hpp"
 #include <algorithm>
 #include <stdexcept>
+#include <cmath>
 
 double Statistics::mean(const std::vector<double>& data) {
     if(data.empty()) {
@@ -58,4 +59,8 @@ double Statistics::sampleVariance(const std::vector<double>& data) {
         varianceSum += (deviation * deviation);
     }
     return varianceSum / static_cast<double>(data.size()-1);
+}
+double Statistics::populationStandardDeviation(const std::vector<double>& data) {
+    return std::sqrt(Statistics::populationVariance(data));
+    
 }

@@ -5,7 +5,6 @@
 class Statistics {
     public:
         /**
-         * @note
          * Calculates the arithmetic mean of a dataset.
          * 
          * @param data Input dataset.
@@ -14,7 +13,6 @@ class Statistics {
          */
         static double mean(const std::vector<double>& data);
         /**
-         * @note
          * Calculates the median of a dataset.
          * 
          * @param data Input dataset.
@@ -29,7 +27,6 @@ class Statistics {
          */
         static double median(const std::vector<double>& data);
         /**
-         * @note
          * Calculates the population variance of a dataset.
          *
          * Mathematical Formula:
@@ -64,4 +61,24 @@ class Statistics {
          * O(1)
          */
         static double sampleVariance(const std::vector<double>& data);
+        /**
+         * Calculates the population standard deviation of a dataset.
+         *
+         * Mathematical Formula:
+         * σ = √(Σ(x - μ)² / N)
+         *
+         * @param data Input dataset.
+         * @return Population standard deviation.
+         * @throws std::invalid_argument if the dataset is empty.
+         *
+         * Time Complexity:
+         * O(n)
+         *
+         * Space Complexity:
+         * O(1)
+         * 
+         * @note
+         * This function computes the population standard deviation by taking the square root of the population variance.
+         */ 
+        static double populationStandardDeviation(const std::vector<double>& data);
 };
